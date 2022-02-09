@@ -1,0 +1,679 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网页设计与制作</title>
+<style>
+	.clear:after{
+		content:'';
+		display: block;
+		height: 0;
+		clear: both;
+	}
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	li{list-style:none;
+	   float:left;}
+	header{
+		width: 100%;
+	}
+	header ul:nth-child(1){
+		float: left;
+		font-size: 35px;
+		margin-left: 30px;
+		margin-top: 15px;
+	}
+	header ul:nth-child(1) img{
+		height: 68.8px;
+	}
+	header ul:nth-child(1) li:nth-child(1){
+		height: 68.8px;
+	}
+	header ul:nth-child(1) h2{
+		margin-left: 20px;
+	}
+	header ul:nth-child(2){
+		float: right;
+	}
+	header ul:nth-child(2){
+		margin-right: 50px;
+		margin-top: 40px;
+	}
+	header ul:nth-child(2) a{
+		width: 50px;
+		text-align: center;
+		color:red;
+		text-decoration: none;
+		display: inline-block;
+	}
+	
+	
+	#search_box{
+	width: 453px;
+	height: 90px;
+	position: absolute;
+	top: 25px;
+	left: 900px;
+}
+
+    #search_con{
+	width: 337px;
+	height: 34px;
+	position: absolute;
+	top: 5px;
+	left: 15px;
+	background: none;
+	font-size: 14px;
+	line-height: 36px;
+	color: #666;
+	border:#000 solid 1px;
+	padding-left:10px;
+}
+
+    #btn{
+	width: 46px;
+	height: 36px;
+	background: none;
+	position: absolute;
+	top: 5px;
+	left: 353px;
+	background:#F00;
+	color:#FFF;
+}	
+	#nav{ width:100%;
+	      height:60px;
+		  background:#000;
+		  margin-top:15px;}
+
+	.p1{
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		padding-left: 0px;
+	}
+	.p1 li{ list-style:none;
+            position: relative;
+		    text-align:center;
+		    display:block;
+			color:#FFF;
+			padding-left:20px;
+			padding-top:15px;
+			font-size:24px;}
+	.p1 a{
+		text-decoration: none;
+		color: white;
+	}
+	.p1 a:hover{
+		color: red;
+	}
+	.xialaliebiao{
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		display: none;
+	}
+	.xialaliebiao li{
+		margin: 0px;
+		padding: 0px;
+	}
+	.xialaliebiao a{
+		font-size: 17px;
+		color: white;
+	}
+	.p1 li:hover ul{
+		display: flex;
+	}
+	.p1 li:hover{
+		background-color: rgb(235, 191, 126);
+	}
+	.tu1{ margin-top:5px;
+	             margin-left:0;
+				 margin-right:0;
+				 width:100%;
+				 
+				 }
+	.left{ width:33%;
+	       height:400px;
+		   font-size:20px;
+		   margin-left:0;
+		   margin-top:50px;
+		   border: 1px solid rgb(212, 205, 205);
+		   float: left;
+		   }
+	th{ border:0px solid;
+		color: white;
+	    border-radius:50px;
+		background: #F03;
+		position:relative;
+		top:0;
+		left:0;
+		margin-top:50px;
+		width:100px;
+		}
+	td{ padding-left:30px;
+	    padding-top:15px;
+		line-height:none;}
+	.tu2{ width:250px;;
+		  margin-top:10px;
+		  display:inline-block;         
+	    }
+	.tu3{ width:400px;
+	      margin-top:10px;
+		  display:inline-block;
+		  }
+		  
+	.container{
+		width: 100%;
+		position: relative;
+	}
+	.container:after{
+		content: "";
+        display: block;
+        height: 0;
+        clear:both;
+
+	}
+	.container>div{
+		display: block;
+		float: left;
+	}
+	.middle{
+		width: 33%;
+		margin-top: 50px;
+		border: 1px solid rgb(212, 205, 205);
+		float: left;
+		height: 400px;
+	}
+	.middle th{
+		font-size: 20px;
+		border:0px solid;
+	    border-radius:50px;
+		background: #F03;
+		top:0;
+		left:0;
+		margin-top:50px;
+		width:100px;
+	}
+	.right{
+		width: 33%;
+		margin-top: 50px;
+		border: 1px solid rgb(212, 205, 205);
+		height: 400px;
+		float: left;
+		background-image: url(./images/bgimg.JPG);
+		background-size: 100% 120%;
+	}
+	.right table{
+		width: 100px;
+	}
+	.right tr{
+		width: 100%;
+		vertical-align: middle;
+		height: 50px;
+	}
+	.right tr:first-child{
+		height: 28.4px;
+	}
+	.right th{
+		font-size: 20px;
+		border:0px solid;
+	    border-radius:50px;
+		background: #F03;
+		position:relative;
+		top:0;
+		left:0;
+		margin-top:50px;
+		width:100px;
+	}
+	.footer{
+		padding-top:20px;
+		width: 100%;
+		background-color: #000;
+		color: white;
+		position:absolute;
+		margin-top:50px;
+	}
+	.footer>div{
+		margin: 0 auto;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+		position:relative;
+	}
+	.notice{
+		width: 100%;
+	}
+	.notice table{
+		width: 1080px;
+		margin: 0 auto;
+		border-spacing: 0px;
+		
+	}
+	.notice td{
+		border: 1px solid black;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-weight: bold;
+		width: 100px;
+	}
+	.notice td:nth-child(2){
+		color: #F00;
+		overflow: hidden;
+		width:980px
+	}
+	.notice td:nth-child(2)>div{
+		width: 300px;
+		animation: tongzhi 10s linear;
+		animation-iteration-count: infinite;
+	}
+	@keyframes tongzhi{
+		0%{
+			margin-left: -300px;
+		}
+		100%{
+			margin-left: 610px;
+		}
+	}
+	.container_bottom{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.container_bottom>div{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.container_bottom>div>div{
+		width: 200px;
+	}
+	.container_bottom>div>div>img{
+		width: 200px;
+	}
+	.container_bottom>div>div>div{
+		text-align: left;
+		width: 150px;
+		margin: 0 auto;
+		height: 42px;
+	}
+	.container_bottom>div>div>div:nth-child(3){
+		display: flex;
+		justify-content: space-around;
+		width: 200px;
+	}
+	.container_bottom>div>div>div:nth-child(3)>div:nth-child(1){
+		color: red;
+		font-size: 14px;
+	}
+	.container_bottom>div>div>div:nth-child(3)>div:nth-child(2){
+		color: rgb(128, 128, 128);
+		font-size: 12px;
+		text-decoration: line-through;
+	}
+			  
+</style>
+</head>
+<body>
+	<header class="clear">
+		<ul>
+			<li><img src="./images/logo.png" alt=""></li>
+			<li><h2>欢迎来到图书商城</h2></li>
+		</ul>
+		<ul>
+			<li><a href="#">登录</a></li>
+			<li>|</li>
+			<li><a href="#">注册</a></li>
+		</ul>
+        <form action="" id="search_box">
+			<input type="text" id='search_con' value="请输入书名" />
+			<input type="button" id="btn" value="搜索" />
+		</form>
+	</header>
+    <div id="nav">
+    	<ul class="p1">
+			<li>
+				<a href="#">首页</a>
+				<ul class="xialaliebiao">
+					<li><a href="#">分类页</a></li>
+					<li><a href="#">购书页</a></li>
+				</ul>
+			</li>
+        	<li>
+				<a href="#">青春励志类</a>
+				<ul class="xialaliebiao">
+					<li><a href="#">青春励志小说</a></li>
+					<li><a href="#">典型人物青春事迹</a></li>
+				</ul>
+			</li>
+   			<li>
+				   <a href="#">文学类</a>
+				   <ul class="xialaliebiao">
+					<li><a href="#">东方文学</a></li>
+					<li><a href="#">西方文学</a></li>
+				</ul>
+			</li>
+   			<li>
+				   <a href="#">悬疑推理类</a>
+				   <ul class="xialaliebiao">
+					<li><a href="#">推理小说</a></li>
+					<li><a href="#">真实事迹</a></li>
+				</ul>
+			</li>
+     		<li>
+				 <a href="#">历史类</a>
+				 <ul class="xialaliebiao">
+					<li><a href="#">中国历史</a></li>
+					<li><a href="#">外国历史</a></li>
+				</ul>
+			</li>
+            <li>
+				<a href="#">教辅类</a>
+				<ul class="xialaliebiao">
+					<li><a href="#">小学</a></li>
+					<li><a href="#">初中</a></li>
+					<li><a href="#">高中</a></li>
+					<li><a href="#">大学</a></li>
+				</ul>
+			</li>
+        </ul>
+   </div>
+   <div id="banner">
+   		<img src="images/01.jpg" class="tu1"/>
+	</div>
+	<div class="notice">
+		<table>
+			<tr>
+				<td>通知公告</td>
+				<td><div>欢迎来到图书商城</div></td>
+			</tr>
+		</table>
+	</div>
+   <div class='container' style="height: 420px;">
+   		<div class="left" style="border-bottom: 0px;height: 100%;">
+        	<table>
+                <tr><th>图书</th></tr>
+            </table>
+			<img src="images/book.jpg" style='width: 350px;'class="tu2" alt=""/>
+        </div>
+        <div class="middle" style="border-bottom: 0px;">
+			<table>
+				<tr><th>价格</th></tr>
+			</table>
+			<ul style="display: block;height: 40px;margin-top: 30px;position: relative;">
+				<li style="left:20px;position:absolute;bottom:-7px;height: 20px;color: red;font-size:10px;">￥</li>
+				<li style="left:30px;position:absolute;bottom:0px;height: 20px;color: red;font-size:20px;">22.8</li>
+				<li style="left:80px;text-decoration: line-through;position:absolute;bottom:-7px;height: 20px;color: rgb(130, 130, 130);font-size:8px;">￥37</li>
+			</ul>
+			<p style="display: block;height: 100px;margin-top: 30px;word-break: break-all;width: 90%;margin-left: 20px;">
+				<span style="background-color: #000;color: white;border-radius: 3px;width: 50px;text-align: center;">品牌</span>
+				夏至未至小说书 郭敬明正版书籍青春文学言情校园小说都市言情书
+			</p>
+        </div>
+		<div class="right" style="border-bottom: 0px;height: 100%;">
+			<table>
+				<tr><th style="width: 100px;">概述</th></tr>
+			</table>
+			<p style="text-indent: 2em;width: 95%;margin: 0 auto;margin-top: 5px; line-height:40px; overflow:hidden; padding-left:20px; padding-right:20px;font-size:13px">
+				立夏和发小七七考入浅川一中，认识了传说中的傅小司和陆之昂，随着遇见等人的加入，正式拉开了属于他们的青春美好的高中生活。毕业后，成人世界的门向他们敞开，每个人都过上了千差万别的生活。傅小司发行画集，红遍了全中国。立夏成为了傅小司的助手兼另一半。七七参加歌唱比赛夺冠，成为全中国的青春偶像。为了成为歌手而北漂的遇见，依旧在为梦想坚持。在每个人都被急速到来的世界冲撞得看不清未来的时候，更大的逆境接踵而至，几乎完全逆转并影响了每个人的人生：傅小司的坎坷、立夏的离开、陆之昂的入狱、程七七的背叛、遇见男友的去世。在离夏天最远的地方，十年的光阴让人发现，除了记忆外，什么也不能永久，但他们都学会了爱和成长。
+			</p>
+		</div>
+	</div>
+	<div class='container' style="height: 420px;">
+   		<div class="left" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+			<img src="images/1641204179558.jpg" style='width: 350px;'class="tu2" alt=""/>
+        </div>
+        <div class="middle" style="margin-top: 0px;;border-top: 0px;border-bottom: 0px;">
+			<ul style="display: block;height: 40px;margin-top: 30px;position: relative;">
+				<li style="left:20px;position:absolute;bottom:-7px;height: 20px;color: red;font-size:10px;">￥</li>
+				<li style="left:30px;position:absolute;bottom:0px;height: 20px;color: red;font-size:20px;">22.8</li>
+				<li style="left:80px;text-decoration: line-through;position:absolute;bottom:-7px;height: 20px;color: rgb(130, 130, 130);font-size:8px;">￥37</li>
+			</ul>
+			<p style="display: block;height: 100px;margin-top: 30px;word-break: break-all;width: 90%;margin-left: 20px;">
+				<span style="background-color: #000;color: white;border-radius: 3px;width: 50px;text-align: center;">品牌</span>
+				青年文摘杂志2022年1期新青春励志文学读者意林作文素材课外订阅
+			</p>
+        </div>
+		<div class="right" style="margin-top: 0px;;border-top: 0px;border-bottom: 0px;height: 100%;">
+			<p style="text-indent: 2em;width: 95%;margin: 0 auto;margin-top: 20px; line-height:40px; overflow:hidden; padding-left:20px; padding-right:20px;font-size:13px">
+				《青年文摘》杂志是由共青团中央主管、中国青年出版总社主办的综合性文摘刊物，是全国发行量最大的青年杂志。自1981年创刊以来，《青年文摘》一直坚持正确的办刊方针，不断创新，发行量屡创新高，获得了业界及广大读者的好评，曾荣获首届国家期刊奖、第二届国家期刊奖提名奖，被列为中国期刊方阵的双高期刊，被评为第一届、第二届百种全国重点社科期刊，实现了社会效益与经济效益的双赢。二十几年来，《青年文摘》焕发出越来越强劲的生命力。
+       			作为中国青年出版总社的社办期刊，《青年文摘》延续中国青年出版总社的宗旨，积极传播科学文化知识，以“引导青年，服务青年”作为自己的办刊理念。经过多年探索，刊物已经在内容选择、文章风格等方面形成自己的特色——通俗易读又不流于肤浅，在朴实亲切的文风中达到引导青年的目的。			
+			</p>
+		</div>
+	</div>
+	<div class='container' style="height: 420px;">
+		<div class="left" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+		 	<img src="images/1641204943567.jpg" style='width: 350px;'class="tu2" alt=""/>
+	 	</div>
+	 	<div class="middle" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;">
+		 	<ul style="display: block;height: 40px;margin-top: 30px;position: relative;">
+			 	<li style="left:20px;position:absolute;bottom:-7px;height: 20px;color: red;font-size:10px;">￥</li>
+			 	<li style="left:30px;position:absolute;bottom:0px;height: 20px;color: red;font-size:20px;">22.8</li>
+			 	<li style="left:80px;text-decoration: line-through;position:absolute;bottom:-7px;height: 20px;color: rgb(130, 130, 130);font-size:8px;">￥37</li>
+		 	</ul>
+		 	<p style="display: block;height: 100px;margin-top: 30px;word-break: break-all;width: 90%;margin-left: 20px;">
+			 	<span style="background-color: #000;color: white;border-radius: 3px;width: 50px;text-align: center;">品牌</span>
+			 	放学后 日本推理名家 东野圭吾 江户川乱步推理悬疑书
+		 	</p>
+	 	</div>
+	 	<div class="right" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+		 	<p style="text-indent: 2em;width: 95%;margin: 0 auto;margin-top: 20px; line-height:40px; overflow:hidden; padding-left:20px; padding-right:20px;font-size:13px">
+				在《放学后》这本小说的艺术表现手法上，体现出较多的模仿痕迹，东野圭吾曾在访谈中提到：“16 岁时，我很幸运得看到了小峰元的《阿基米德借刀杀人》，然后就完全被它征服。” [3]  这部小说获得了第十九届江户川乱步奖，在七十年代的推理界曾引起轰动。小说中涉及的青春校园推理，青年人畸形的人生观、价值观，及手稿、笔记式的叙事结构都给东野的小说创作带来了深刻的影响。东野创作的《放学后》，在内容和手法就有很明显的表现，《放学后》中东野圭吾写到了利用弓箭的诡计，这得益于1977年时，东野圭吾加入了学校的西式弓箭部，他曾任射箭部的队长，这段经历使他在《放学后》中得到了很好利用。而在酝酿《放学后》这部书期间，东野圭吾与担任某女子学校的代课教师结婚，《放学后》主人公前岛是在女子高中工作的设定的灵感就是来源于此。</p>
+	 	</div>
+ 	</div>
+	 <div class='container' style="height: 420px;">
+		<div class="left" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+		 	<img src="images/1641204986689.jpg" style='width: 350px;'class="tu2" alt=""/>
+	 	</div>
+	 	<div class="middle" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+		 	<ul style="display: block;height: 40px;margin-top: 30px;position: relative;">
+			 	<li style="left:20px;position:absolute;bottom:-7px;height: 20px;color: red;font-size:10px;">￥</li>
+			 	<li style="left:30px;position:absolute;bottom:0px;height: 20px;color: red;font-size:20px;">22.8</li>
+			 	<li style="left:80px;text-decoration: line-through;position:absolute;bottom:-7px;height: 20px;color: rgb(130, 130, 130);font-size:8px;">￥37</li>
+		 	</ul>
+		 	<p style="display: block;height: 100px;margin-top: 30px;word-break: break-all;width: 90%;margin-left: 20px;">
+			 	<span style="background-color: #000;color: white;border-radius: 3px;width: 50px;text-align: center;">品牌</span>
+			 	正版 三国演义 原著原版 全集120回无删减青少年初高中学生阅读书
+		 	</p>
+	 	</div>
+	 	<div class="right" style="margin-top: 0px;border-top: 0px;border-bottom: 0px;height: 100%;">
+		 	<p style="text-indent: 2em;width: 95%;margin: 0 auto;margin-top: 20px; line-height:40px; overflow:hidden; padding-left:20px; padding-right:20px;font-size:13px">
+				《三国演义》描写了从东汉末年到西晋初年之间近百年的历史风云，以描写战争为主，诉说了东汉末年的群雄割据混战和魏、蜀、吴三国之间的政治和军事斗争，最终司马炎一统三国，建立晋朝的故事。反映了三国时代各类社会斗争与矛盾的转化，并概括了这一时代的历史巨变，塑造了一群叱咤风云的三国英雄人物。《三国演义》（全名为《三国志通俗演义》，又称《三国志演义》）是元末明初小说家罗贯中根据陈寿《三国志》和裴松之注解以及民间三国故事传说经过艺术加工创作而成的长篇章回体历史演义小说，与《西游记》《水浒传》《红楼梦》并称为中国古典四大名著。《三国演义》是中国文学史上第一部章回小说，是历史演义小说的开山之作，也是第一部文人长篇小说，被列为中国古典四大名著之一。明清时期甚至有“第一才子书”之称。
+			</p>
+	 	</div>
+ 	</div>
+	 <div class='container' style="height: 420px;">
+		<div class="left" style="margin-top: 0px;border-top: 0px;height: 100%;">
+		 	<img src="images/1641205029076.jpg" style='width: 350px;'class="tu2" alt=""/>
+	 	</div>
+	 	<div class="middle" style="margin-top: 0px;border-top: 0px;height: 100%;">
+		 	<ul style="display: block;height: 40px;margin-top: 30px;position: relative;">
+			 	<li style="left:20px;position:absolute;bottom:-7px;height: 20px;color: red;font-size:10px;">￥</li>
+			 	<li style="left:30px;position:absolute;bottom:0px;height: 20px;color: red;font-size:20px;">22.8</li>
+			 	<li style="left:80px;text-decoration: line-through;position:absolute;bottom:-7px;height: 20px;color: rgb(130, 130, 130);font-size:8px;">￥37</li>
+		 	</ul>
+		 	<p style="display: block;height: 100px;margin-top: 30px;word-break: break-all;width: 90%;margin-left: 20px;">
+			 	<span style="background-color: #000;color: white;border-radius: 3px;width: 50px;text-align: center;">品牌</span>
+			 	新版新东方2022考研英语阅读理解精读100篇基础版 英语一二通用书
+		 	</p>
+	 	</div>
+	 	<div class="right" style="margin-top: 0px;border-top: 0px;height: 100%;">
+		 	<p style="text-indent: 2em;width: 95%;margin: 0 auto;margin-top: 20px; line-height:40px; overflow:hidden; padding-left:20px; padding-right:20px;font-size:13px">
+				考研英语基础版，适用对象：
+				大三考研、基础薄弱的考研英语一考生，练习考研英语真题有难度的考生；词汇量不足，看不懂真题文章的考生。第一轮复习，需要了解考研英语命题规律和解题技巧的考生。
+				推荐理由：
+				1.考研英语一备考视频课，了解考试题型及特点，掌握各题型解题技巧；
+				2.分册装，九合一，分类突破阅读理解A节、B节、完型填空、翻译、写作、模拟试卷、基础语法、真题难句、词汇；
+				3.解析详尽且版面清晰：全文翻译、词汇难点、难句分析等板块，帮助考生读透考研英语考点；解析不仅传授考生正向解题，还教会考生如何排除干扰；特别总结解题技巧，帮助考生总结考研英语真题命题规律，提高答题准确率；
+				4.考研英语阅读材料与考研真题同源，文章选自TIME《时代》、Scientific American《科学美国人》、Newsweek《新闻周刊》等。
+			</p>
+	 	</div>
+ 	</div>
+	 <div class="container_bottom">
+		<h2>励志类图书</h2>
+		<div style="display: flex;">
+			<div>
+				<img src="./images/励志类1.png" alt="">
+				<div>有一种活法叫不纠结</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类2.jpg" alt="">
+				<div>所有失去的终将以另一种方式归来</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类3.png" alt="">
+				<div>终身成长</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类4.jpg" alt="">
+				<div>别在吃苦的年纪选择安逸</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类5.jfif" alt="">
+				<div>你的任性必须配得上你的本事</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类6.jfif" alt="">
+				<div>将来的你一定会感谢现在拼命的自己</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+		</div>
+		<h2>文学类图书</h2>
+		<div style="display: flex;">
+			<div>
+				<img src="./images/励志类1.png" alt="">
+				<div>有一种活法叫不纠结</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类2.jpg" alt="">
+				<div>所有失去的终将以另一种方式归来</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类3.png" alt="">
+				<div>终身成长</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类4.jpg" alt="">
+				<div>别在吃苦的年纪选择安逸</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类5.jfif" alt="">
+				<div>你的任性必须配得上你的本事</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类6.jfif" alt="">
+				<div>将来的你一定会感谢现在拼命的自己</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+		</div>
+		<h2>教辅类图书</h2>
+		<div style="display: flex;">
+			<div>
+				<img src="./images/励志类1.png" alt="">
+				<div>有一种活法叫不纠结</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类2.jpg" alt="">
+				<div>所有失去的终将以另一种方式归来</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类3.png" alt="">
+				<div>终身成长</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类4.jpg" alt="">
+				<div>别在吃苦的年纪选择安逸</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类5.jfif" alt="">
+				<div>你的任性必须配得上你的本事</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/励志类6.jfif" alt="">
+				<div>将来的你一定会感谢现在拼命的自己</div>
+				<div>
+					<div>￥40.00</div>
+					<div>￥99.00</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+    <!-- <div id="title_box">
+    	<h3 id="meishitianxia">美食天下</h3>
+	</div> -->
+	<div class="footer">
+		<div>传智播客·黑马程序员编著</div>
+		<div>版权所有2006-2014北京传智播客教育科技有限公司</div>
+		<div>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096</div>
+		<div>电话：123456789 传真：010-0000000</div>
+	</div>
+  
+</body>
+</html>
